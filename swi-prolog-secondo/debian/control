@@ -8,7 +8,7 @@ Homepage: http://www.swi-prolog.org
 
 Package: swi-prolog-secondo
 Architecture: any
-Depends: ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libreadline-dev, libncursesw5-dev, default-jre-headless | java2-runtime
 Conflicts: swi-prolog, swi-prolog-nox, swi-prolog-x
 Provides: swi-prolog 
 Description: A swi-prolog build for secondo
