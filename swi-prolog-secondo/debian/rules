@@ -10,6 +10,7 @@ export DEB_BUILD_HARDENING=1
 clean:
 	[ ! -f Makefile ] || $(MAKE) clean
 	[ ! -f Makefile ] || $(MAKE) distclean
+	dh_clean
 
 configure:
 	./configure --prefix=/usr --enable-shared
