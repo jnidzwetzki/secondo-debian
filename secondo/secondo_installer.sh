@@ -38,6 +38,7 @@ export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$SWI_HOME_DIR/lib:\$PL_LIB_DIR
 export PATH=\$PATH:\$SECONDO_BUILD_DIR/bin
 EOF
 else 
+cat <<-EOF > ~/.secondorc
 export SECONDO_BUILD_DIR=/opt/secondo
 export SECONDO_PLATFORM=linux
 export SECONDO_CONFIG=~/SecondoConfig.ini
@@ -46,6 +47,7 @@ export PL_LIB_DIR=\$SWI_HOME_DIR/lib/i686-linux/
 export PL_DLL_DIR=\$SWI_HOME_DIR/lib/i686-linux/
 export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$SWI_HOME_DIR/lib:\$PL_LIB_DIR
 export PATH=\$PATH:\$SECONDO_BUILD_DIR/bin
+EOF
 fi
 
 if [ $(grep secondorc ~/.bashrc | wc -l) -eq 0 ]; then
