@@ -5,13 +5,13 @@
 #####################################################################
 
 # Install dependencies
-apt-get install flex bison gcc g++ libdb5.1 libdb5.1-dev libdb5.1++ libdb5.1++-dev db5.1-util libjpeg62 libjpeg62-dev libgsl0-dev libreadline-dev librecode-dev libgmp-dev libncurses-dev libxml2-dev libboost-all-dev build-essential debhelper fakeroot 
+apt-get install flex bison gcc g++ libdb5.1 libdb5.1-dev libdb5.1++ libdb5.1++-dev db5.1-util libjpeg62 libjpeg62-dev libgsl0-dev libreadline-dev librecode-dev libgmp-dev libncurses-dev libxml2-dev libboost-all-dev build-essential debhelper fakeroot openjdk-7-jdk libxml2 libxml2-dev 
 
-VER=v340
+VER=v400
 
-if [ ! -f secondo-$VER-LAT1.tar.gz ]; then
-    wget http://dna.fernuni-hagen.de/secondo/files/secondo-$VER-LAT1.tar.gz
-    tar -xzf secondo-$VER-LAT1.tar.gz 
+if [ ! -f secondo-$VER-LAT1.tgz ]; then
+    wget http://dna.fernuni-hagen.de/Secondo.html/files/Sources/secondo-$VER-LAT1.tgz 
+    tar -xzf secondo-$VER-LAT1.tgz 
 fi
 
 cd secondo
