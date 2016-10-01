@@ -8,7 +8,7 @@ LBITS := $(shell getconf LONG_BIT)
 
 ifeq ($(LBITS),64)
 	PLATTFORM=linux64
-	PL_LIB_DIR=lib/x86_64-linux/
+	PL_LIB_DIR=lib/amd64/
 	PL_VERSION=50800
 	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-amd64
 else
