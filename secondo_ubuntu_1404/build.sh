@@ -14,6 +14,19 @@ if [ ! -f secondo-$VER-LAT1.tgz ]; then
     tar -xzf secondo-$VER-LAT1.tgz 
 fi
 
+# Activate additional algebras
+sed -i 's|#ALGEBRA_DIRS += MapMatching|ALGEBRA_DIRS += MapMatching|g' secondo/makefile.algebras
+sed -i 's|#ALGEBRAS     += MapMatchingAlgebra|ALGEBRAS     += MapMatchingAlgebra|g' secondo/makefile.algebras
+sed -i 's|#ALGEBRA_DEPS += xml2|ALGEBRA_DEPS += xml2|g' secondo/makefile.algebras
+
+sed -i 's|#ALGEBRA_DIRS += OSM|ALGEBRA_DIRS += OSM|g' secondo/makefile.algebras
+sed -i 's|#ALGEBRAS     += OsmAlgebra|ALGEBRAS     += OsmAlgebra|g' secondo/makefile.algebras
+sed -i 's|#ALGEBRA_DEPS += xml2|ALGEBRA_DEPS += xml2|g' secondo/makefile.algebras
+
+sed -i 's|#ALGEBRA_DEP_DIRS += /usr/lib/libxml2|ALGEBRA_DEP_DIRS += /usr/lib/libxml2|g' secondo/makefile.algebras
+sed -i 's|#ALGEBRA_INCLUDE_DIRS += /usr/include/libxml2|ALGEBRA_INCLUDE_DIRS += /usr/include/libxml2|g' secondo/makefile.algebras
+
+
 cd secondo
 
 # Link our debian files to the package
