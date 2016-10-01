@@ -10,12 +10,12 @@ ifeq ($(LBITS),64)
 	PLATTFORM=linux64
 	PL_LIB_DIR=lib/x86_64-linux/
 	PL_VERSION=50800
-	J2SDK_ROOT=/usr/lib/jvm/java-6-openjdk-amd64
+	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-amd64
 else
 	PLATTFORM=linux
 	PL_LIB_DIR=lib/i686-linux/
 	PL_VERSION=50647
-	J2SDK_ROOT=/usr/lib/jvm/java-6-openjdk-i386
+	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-i386
 endif
 
 SWI_HOME_DIR=/usr/lib/swi-prolog
