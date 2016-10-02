@@ -1,3 +1,6 @@
 #!/bin/bash
 
-dpkg-scanpackages  -m  ./ /dev/null | gzip > Packages.gz
+apt-ftparchive packages . > Packages
+gzip -c Packages > Packages.gz
+
+apt-ftparchive release . > Release
