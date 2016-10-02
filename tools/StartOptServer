@@ -1,0 +1,18 @@
+#!/bin/bash
+
+dir=$(mktemp -d)
+
+echo "Preparing the SECONDO Optimizer in $dir"
+
+if [ ! -d $dir ]; then
+   echo "Error: Unable to create $dir"
+   exit -1
+fi
+
+cp -a $SECONDO_BUILD_DIR/Optimizer/* $dir
+cd $dir
+./StartOptServer $* 
+
+cd
+
+rm -r $dir

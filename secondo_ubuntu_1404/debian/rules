@@ -8,7 +8,7 @@ LBITS := $(shell getconf LONG_BIT)
 
 ifeq ($(LBITS),64)
 	PLATTFORM=linux64
-	PL_LIB_DIR=lib/amd64/
+	PL_LIB_DIR=lib/x86_64-linux/
 	PL_VERSION=50800
 	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-amd64
 else
@@ -18,7 +18,7 @@ else
 	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-i386
 endif
 
-SWI_HOME_DIR=/usr/lib/swi-prolog
+SWI_HOME_DIR=/usr/lib/swipl-6.6.5
 DESTDIR=$(CURDIR)/debian/secondo
 LD_LIBRARY_PATH=$(SWI_HOME_DIR)/lib:$(SWI_HOME_DIR)/$PL_LIB_DIR; \
 
@@ -65,6 +65,7 @@ install: build
 	cp ../../tools/secondo_installer.sh $(DESTDIR)/opt/secondo/bin
 	cp ../../tools/SecondoPL $(DESTDIR)/opt/secondo/bin
 	cp ../../tools/SecondoPLTTY $(DESTDIR)/opt/secondo/bin
+	cp ../../tools/StartOptServer $(DESTDIR)/opt/secondo/bin
 	cp -a bin/tmp $(DESTDIR)/opt/secondo/bin
 
 	# Databases
