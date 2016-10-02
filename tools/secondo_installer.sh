@@ -36,6 +36,8 @@ export PL_LIB_DIR=\$SWI_HOME_DIR/lib/x86_64-linux/
 export PL_DLL_DIR=\$SWI_HOME_DIR/lib/x86_64-linux/
 export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$SWI_HOME_DIR/lib:\$PL_LIB_DIR
 export PATH=\$PATH:\$SECONDO_BUILD_DIR/bin
+export JPL_DLL=\$SWI_HOME_DIR/\$PL_LIB_DIR/libjpl.so
+export JPL_JAR=\$SWI_HOME_DIR/lib/jpl.jar
 EOF
 else 
 cat <<-EOF > ~/.secondorc
@@ -47,6 +49,8 @@ export PL_LIB_DIR=\$SWI_HOME_DIR/lib/i686-linux/
 export PL_DLL_DIR=\$SWI_HOME_DIR/lib/i686-linux/
 export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$SWI_HOME_DIR/lib:\$PL_LIB_DIR
 export PATH=\$PATH:\$SECONDO_BUILD_DIR/bin
+export JPL_DLL=\$SWI_HOME_DIR/\$PL_LIB_DIR/libjpl.so
+export JPL_JAR=\$SWI_HOME_DIR/lib/jpl.jar
 EOF
 fi
 
