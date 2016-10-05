@@ -31,9 +31,9 @@ cat <<-EOF > ~/.secondorc
 export SECONDO_BUILD_DIR=/opt/secondo
 export SECONDO_PLATFORM=linux64
 export SECONDO_CONFIG=~/SecondoConfig.ini
-export SWI_HOME_DIR=/usr/lib/swipl-6.6.5
-export PL_LIB_DIR=\$SWI_HOME_DIR/lib/x86_64-linux/
-export PL_DLL_DIR=\$SWI_HOME_DIR/lib/x86_64-linux/
+export SWI_HOME_DIR=/usr/lib/swi-prolog
+export PL_LIB_DIR=\$SWI_HOME_DIR/lib/amd64/
+export PL_DLL_DIR=\$SWI_HOME_DIR/lib/amd64/
 export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$SWI_HOME_DIR/lib:\$PL_LIB_DIR
 export PATH=\$PATH:\$SECONDO_BUILD_DIR/bin
 export JPL_DLL=\$SWI_HOME_DIR/\$PL_LIB_DIR/libjpl.so
