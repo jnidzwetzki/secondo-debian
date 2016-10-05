@@ -5,7 +5,7 @@
 #####################################################################
 
 # Install dependencies
-apt-get install flex bison gcc g++ libdb5.1 libdb5.1-dev libdb5.1++ libdb5.1++-dev db5.1-util libjpeg62 libjpeg62-dev libgsl0-dev libreadline-dev librecode-dev libgmp-dev libncurses-dev libxml2-dev libboost-all-dev build-essential debhelper fakeroot openjdk-7-jdk libxml2 libxml2-dev wget swi-prolog-secondo 
+apt-get install flex bison gcc g++ libdb5.1 libdb5.1-dev libdb5.1++ libdb5.1++-dev db5.1-util libjpeg62 libjpeg62-dev libgsl0-dev libreadline-dev librecode-dev libgmp-dev libncurses-dev libxml2-dev libboost-all-dev build-essential debhelper fakeroot openjdk-7-jdk libxml2 libxml2-dev wget swi-prolog-nox swi-prolog-java swi-prolog
 
 VER=v400
 

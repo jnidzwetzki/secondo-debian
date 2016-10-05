@@ -8,17 +8,17 @@ LBITS := $(shell getconf LONG_BIT)
 
 ifeq ($(LBITS),64)
 	PLATTFORM=linux64
-	PL_LIB_DIR=lib/x86_64-linux/
-	PL_VERSION=50800
+	PL_LIB_DIR=lib/amd64/
+	PL_VERSION=60604
 	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-amd64
 else
 	PLATTFORM=linux
 	PL_LIB_DIR=lib/i686-linux/
-	PL_VERSION=50647
+	PL_VERSION=60604
 	J2SDK_ROOT=/usr/lib/jvm/java-7-openjdk-i386
 endif
 
-SWI_HOME_DIR=/usr/lib/swipl-6.6.5
+SWI_HOME_DIR=/usr/lib/swi-prolog/
 DESTDIR=$(CURDIR)/debian/secondo
 LD_LIBRARY_PATH=$(SWI_HOME_DIR)/lib:$(SWI_HOME_DIR)/$PL_LIB_DIR; \
 
