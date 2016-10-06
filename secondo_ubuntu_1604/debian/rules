@@ -71,6 +71,7 @@ install: build
 	# Databases
 	cp -a bin/berlintest $(DESTDIR)/opt/secondo/bin
 	cp -a bin/Trains.obj $(DESTDIR)/opt/secondo/bin
+	sed -i "s|Trains.obj|/opt/secondo/bin/Trains.obj|g" $(DESTDIR)/opt/secondo/bin/berlintest
 	cp -a bin/opt $(DESTDIR)/opt/secondo/bin
 
 	# Java gui
