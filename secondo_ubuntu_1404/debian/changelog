@@ -1,3 +1,9 @@
+secondo (4.0.0-3+ubuntu1404) stable; urgency=low
+
+  * Added missing Trains.obj 
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Thu, 06 Oct 2016 12:08:20 +0100
+
 secondo (4.0.0-2+ubuntu1404) stable; urgency=low
 
   * Switched prolog package
