@@ -1,18 +1,18 @@
 #!/bin/bash
 
-dir=$(mktemp -d)
-
-echo "Preparing the SECONDO Optimizer in $dir"
-
-if [ ! -d $dir ]; then
-   echo "Error: Unable to create $dir"
-   exit -1
+if [ -z "$SECONDO_WORK_DIR" ]; then
+	echo '$SECONDO_WORK_DIR is not defined, check your SECONDO installation'
+	exit -1
 fi
 
-cp -a $SECONDO_BUILD_DIR/Optimizer/* $dir
-cd $dir
+if [ ! -d $SECONDO_WORK_DIR/optimizer ]; then
+	echo "$SECONDO_WORK_DIR/optimizer not found, check your SECONDO installation"
+	exit -1
+fi
+
+echo "Preparing the SECONDO Optimizer in $SECONDO_WORK_DIR/optimizer"
+cd $SECONDO_WORK_DIR/optimizer
+
+rsync -rt $SECONDO_BUILD_DIR/Optimizer/* .
+
 ./StartOptServer $* 
-
-cd
-
-rm -r $dir
