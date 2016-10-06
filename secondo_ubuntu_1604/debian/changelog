@@ -1,3 +1,9 @@
+secondo (4.0.0-4+ubuntu1604) stable; urgency=low
+
+  * Fixed server segfault 
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Thu, 06 Oct 2016 13:48:21 +0100
+
 secondo (4.0.0-3+ubuntu1604) stable; urgency=low
 
   * Added missing Trains.obj 
