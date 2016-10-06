@@ -18,7 +18,26 @@ if [ -n "$databasedir2" ]; then
     databasedir=$databasedir2
 fi
 
-mkdir -p $databasedir
+if [ ! -d $databasedir ]; then
+	mkdir -p $databasedir
+fi
+
+workdir=~/.secondo
+echo -n "Specify the SECONDO working directory [$workdir]: "
+read workdir2
+
+if [ -n "$workdir2" ]; then
+    workdir=$workdir2
+fi
+
+if [ ! -d $workdir ]; then
+	mkdir -p $workdir
+	mkdir -p $workdir/sgui
+	mkdir -p $workdir/optimizer
+
+	cp /opt/secondo/bin/javagui/GBS.cfg $workdir/sgui
+	cp /opt/secondo/bin/javagui/gui.cfg $workdir/sgui
+fi
 
 cp /opt/secondo/etc/SecondoConfig.ini ~/
 sed -i "s|SecondoHome=.*|SecondoHome=$databasedir|" ~/SecondoConfig.ini
@@ -28,6 +47,7 @@ architecture=$(getconf LONG_BIT)
 
 if [ $architecture -eq 64 ]; then
 cat <<-EOF > ~/.secondorc
+export SECONDO_WORK_DIR=$workdir
 export SECONDO_BUILD_DIR=/opt/secondo
 export SECONDO_PLATFORM=linux64
 export SECONDO_CONFIG=~/SecondoConfig.ini
@@ -41,6 +61,7 @@ export JPL_JAR=\$SWI_HOME_DIR/lib/jpl.jar
 EOF
 else 
 cat <<-EOF > ~/.secondorc
+export SECONDO_WORK_DIR=$workdir
 export SECONDO_BUILD_DIR=/opt/secondo
 export SECONDO_PLATFORM=linux
 export SECONDO_CONFIG=~/SecondoConfig.ini

@@ -10,5 +10,7 @@ cd $SECONDO_WORK_DIR/optimizer
 
 rsync -rt $SECONDO_BUILD_DIR/Optimizer/* .
 
-$SECONDO_BUILD_DIR/bin/SecondoBDB -pltty -L256M -G256M $* pl -g true
+export SECONDO_PARAM_RTFlags="DEBUG:DemangleStackTrace,CMSG:Color,SMI:NoTransactions,CTLG:SkipExamples,SI:PrintCmdTimes"
+
+$SECONDO_BUILD_DIR/bin/SecondoBDB -pltty -L256M -G256M $* pl -g true 
 

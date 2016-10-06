@@ -1,3 +1,9 @@
+secondo (4.0.0-5+ubuntu1604) stable; urgency=low
+
+  * Fixed GUI permissions 
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Thu, 06 Oct 2016 16:15:07 +0100
+
 secondo (4.0.0-4+ubuntu1604) stable; urgency=low
 
   * Fixed server segfault 
