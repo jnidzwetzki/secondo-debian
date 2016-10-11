@@ -1,3 +1,9 @@
+secondo (4.0.0-6+ubuntu1604) stable; urgency=low
+
+  * Added additional algebras
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Mon, 10 Oct 2016 15:38:59 +0100
+
 secondo (4.0.0-5+ubuntu1604) stable; urgency=low
 
   * Fixed GUI permissions 
