@@ -22,4 +22,4 @@ cd $SECONDO_WORK_DIR/sgui
 rsync -rt /opt/secondo/bin/javagui/ViewerList.txt .
 rsync -rt /opt/secondo/bin/javagui/data .
 
-java -Xmx80M -jar $guijar $*
+java -Xmx512M -jar $guijar $*
