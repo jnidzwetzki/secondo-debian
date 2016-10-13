@@ -36,11 +36,11 @@ sed -i 's|#ALGEBRAS     += OptAuxAlgebra|ALGEBRAS     += OptAuxAlgebra|g' second
 #sed -i 's|#ALGEBRAS     += TinAlgebra|ALGEBRAS     += TinAlgebra|g' secondo/makefile.algebras
 #sed -i 's|#ALGEBRA_DEPS += quadmath gmp|ALGEBRA_DEPS += quadmath gmp|g' secondo/makefile.algebras
 
-sed -i 's|#ALGEBRA_DIRS += Distributed2|ALGEBRA_DIRS += Distributed2|g' secondo/makefile.algebras
-sed -i 's|#ALGEBRAS += Distributed2Algebra|ALGEBRAS += Distributed2Algebra|g' secondo/makefile.algebras
-sed -i 's|#DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
-sed -i 's|#CCFLAGS += -pthread -DTHREAD_SAFE|CCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
-sed -i 's|#COMMON_LD_FLAGS += -lboost_thread -lboost_system|COMMON_LD_FLAGS += -lboost_thread -lboost_system|g' secondo/makefile.algebras
+sed -i '277s|#ALGEBRA_DIRS += Distributed2|ALGEBRA_DIRS += Distributed2|g' secondo/makefile.algebras
+sed -i '278s|#ALGEBRAS += Distributed2Algebra|ALGEBRAS += Distributed2Algebra|g' secondo/makefile.algebras
+sed -i '279s|#DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
+sed -i '280s|#CCFLAGS += -pthread -DTHREAD_SAFE|CCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
+sed -i '281s|#COMMON_LD_FLAGS += -lboost_thread -lboost_system|COMMON_LD_FLAGS += -lboost_thread -lboost_system|g' secondo/makefile.algebras
 
 sed -i 's|#ALGEBRA_DIRS += RobustGeometry|ALGEBRA_DIRS += RobustGeometry|g' secondo/makefile.algebras
 sed -i 's|#ALGEBRAS   += RobustGeometryAlgebra|ALGEBRAS   += RobustGeometryAlgebra|g' secondo/makefile.algebras

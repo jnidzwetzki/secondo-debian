@@ -1,3 +1,9 @@
+secondo (4.0.0-7+ubuntu1404) stable; urgency=low
+
+  * Set GUI memory to 512MB 
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Thu, 13 Oct 2016 19:25:03 +0100
+
 secondo (4.0.0-6+ubuntu1404) stable; urgency=low
 
   * Added additional algebras
