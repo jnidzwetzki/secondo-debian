@@ -1,3 +1,9 @@
+secondo (4.1.0-1+ubuntu1404) stable; urgency=low
+
+  * New upstream version 
+
+ -- Jan Nidzwetzki <jnidzwetzki@gmx.de>  Wed, 21 Dec 2016 15:39:58 +0100
+
 secondo (4.0.0-8+ubuntu1404) stable; urgency=low
 
   * Added missing scripts 

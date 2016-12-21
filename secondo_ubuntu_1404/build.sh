@@ -7,7 +7,7 @@
 # Install dependencies
 apt-get install flex bison gcc g++ libdb5.1 libdb5.1-dev libdb5.1++ libdb5.1++-dev db5.1-util libjpeg62 libjpeg62-dev libgsl0-dev libreadline-dev librecode-dev libgmp-dev libncurses-dev libxml2-dev libboost-all-dev build-essential debhelper fakeroot openjdk-7-jdk libxml2 libxml2-dev wget swi-prolog-nox swi-prolog-java swi-prolog libquadmath0 libgmp-dev libgmp10 libboost-thread-dev libboost-thread1.54.0 libboost-system-dev libboost-system1.54.0
 
-VER=v400
+VER=v410
 
 if [ ! -f secondo-$VER-LAT1.tgz ]; then
     wget http://dna.fernuni-hagen.de/Secondo.html/files/Sources/secondo-$VER-LAT1.tgz 
@@ -35,11 +35,11 @@ sed -i 's|#ALGEBRAS     += OptAuxAlgebra|ALGEBRAS     += OptAuxAlgebra|g' second
 #sed -i 's|#ALGEBRAS     += TinAlgebra|ALGEBRAS     += TinAlgebra|g' secondo/makefile.algebras
 #sed -i 's|#ALGEBRA_DEPS += quadmath gmp|ALGEBRA_DEPS += quadmath gmp|g' secondo/makefile.algebras
 
-sed -i '277s|#ALGEBRA_DIRS += Distributed2|ALGEBRA_DIRS += Distributed2|g' secondo/makefile.algebras
-sed -i '278s|#ALGEBRAS += Distributed2Algebra|ALGEBRAS += Distributed2Algebra|g' secondo/makefile.algebras
-sed -i '279s|#DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
-sed -i '280s|#CCFLAGS += -pthread -DTHREAD_SAFE|CCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
-sed -i '281s|#COMMON_LD_FLAGS += -lboost_thread -lboost_system|COMMON_LD_FLAGS += -lboost_thread -lboost_system|g' secondo/makefile.algebras
+sed -i '278s|#ALGEBRA_DIRS += Distributed2|ALGEBRA_DIRS += Distributed2|g' secondo/makefile.algebras
+sed -i '279s|#ALGEBRAS += Distributed2Algebra|ALGEBRAS += Distributed2Algebra|g' secondo/makefile.algebras
+sed -i '280s|#DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|DEFAULTCCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
+sed -i '281s|#CCFLAGS += -pthread -DTHREAD_SAFE|CCFLAGS += -pthread -DTHREAD_SAFE|g' secondo/makefile.algebras
+sed -i '282s|#COMMON_LD_FLAGS += -lboost_thread -lboost_system|COMMON_LD_FLAGS += -lboost_thread -lboost_system|g' secondo/makefile.algebras
 
 sed -i 's|#ALGEBRA_DIRS += RobustGeometry|ALGEBRA_DIRS += RobustGeometry|g' secondo/makefile.algebras
 sed -i 's|#ALGEBRAS   += RobustGeometryAlgebra|ALGEBRAS   += RobustGeometryAlgebra|g' secondo/makefile.algebras
