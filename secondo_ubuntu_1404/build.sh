@@ -26,8 +26,8 @@ sed -i 's|#ALGEBRA_DEPS += xml2|ALGEBRA_DEPS += xml2|g' secondo/makefile.algebra
 sed -i 's|#ALGEBRA_DEP_DIRS += /usr/lib/libxml2|ALGEBRA_DEP_DIRS += /usr/lib/libxml2|g' secondo/makefile.algebras
 sed -i 's|#ALGEBRA_INCLUDE_DIRS += /usr/include/libxml2|ALGEBRA_INCLUDE_DIRS += /usr/include/libxml2|g' secondo/makefile.algebras
 
-sed -i 's|#ALGEBRA_DIRS += MP3|ALGEBRA_DIRS += MP3|g' secondo/makefile.algebras
-sed -i 's|#ALGEBRAS     += MP3Algebra|ALGEBRAS     += MP3Algebra|g' secondo/makefile.algebras
+#sed -i 's|#ALGEBRA_DIRS += MP3|ALGEBRA_DIRS += MP3|g' secondo/makefile.algebras
+#sed -i 's|#ALGEBRAS     += MP3Algebra|ALGEBRAS     += MP3Algebra|g' secondo/makefile.algebras
 
 sed -i 's|#ALGEBRA_DIRS += OptAux|ALGEBRA_DIRS += OptAux|g' secondo/makefile.algebras
 sed -i 's|#ALGEBRAS     += OptAuxAlgebra|ALGEBRAS     += OptAuxAlgebra|g' secondo/makefile.algebras
