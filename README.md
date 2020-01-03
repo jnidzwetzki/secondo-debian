@@ -44,3 +44,9 @@ StartOptServer
 exit
 userdel -r secondouser
 ```
+
+### Misc
+
+```bash
+docker  cp 520c2a9cc927:/secondo-debian/secondo_ubuntu_1804/secondo_4.1.3-1+ubuntu1804_amd64.deb .
+```
