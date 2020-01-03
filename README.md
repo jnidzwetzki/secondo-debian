@@ -20,15 +20,26 @@ dpkg -i secondo_*.deb
 useradd -m secondouser -s /bin/bash
 su - secondouser
 /opt/secondo/bin/secondo_installer.sh
+source ~/.secondorc
+
 SecondoTTYBDB
+> restore database opt from '/opt/secondo/bin/opt'
+> query ten
+
+open 
 SecondoPLTTY
+> open database opt
+> select * from ten
+> exit
 
 screen
 # Screen1
 SecondoMonitor -s
 # Screen2
 SecondoTTYCS
+> exit
 StartOptServer
+> exit
 
 exit
 userdel -r secondouser
