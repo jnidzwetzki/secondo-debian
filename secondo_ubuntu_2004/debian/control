@@ -8,6 +8,6 @@ Homepage: http://dna.fernuni-hagen.de/Secondo.html
 
 Package: secondo
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libdb5.3, libdb5.3++, db5.3-util, libjpeg62, librecode0, libxml2, openjdk-8-jdk | openjdk-8-jre, swi-prolog-nox, swi-prolog-java, swi-prolog, rsync, libquadmath0, libgmp10, libboost-all-dev, original-awk
+Depends: ${shlibs:Depends}, ${misc:Depends}, libdb5.3, libdb5.3++, db5.3-util, libjpeg62, librecode0, libxml2, openjdk-8-jdk | openjdk-8-jre, swi-prolog-nox, swi-prolog-java, swi-prolog, rsync, libquadmath0, libgmp10, libboost-all-dev, original-awk, libbison-dev
 Description: The secondo database 
  Designed at the FernUniversitaet in Hagen, Secondo is a platform for implementing and experimenting with various kinds of data models. 
