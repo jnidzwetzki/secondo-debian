@@ -9,9 +9,18 @@ apt-get update
 apt-get install git vim wget rsync dpkg-dev screen -y
 git config --global user.name "Jan Nidzwetzki"
 git config --global user.email jnidzwetzki@gmx.de
-git clone https://github.com/jnidzwetzki/secondo-debian.git
+git clone https://github.com/secondo-database/secondo-debian.git
 cd secondo-debian/ubuntu_1804
 ./build.sh
+```
+
+```bash
+docker create --name ubuntu-20-10 -it ubuntu:20.10
+docker start ubuntu-20-10
+docker exec -it ubuntu-20-10 /bin/bash
+
+docker stop ubuntu-20-10
+docker rm ubuntu-20-10
 ```
 
 # Testing 
