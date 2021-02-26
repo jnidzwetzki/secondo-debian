@@ -1,3 +1,10 @@
+
+!!!! 
+Current version is moved to https://github.com/secondo-database/secondo/tree/main/packaging/debian
+!!!!
+
+
+
 # Secondo Packages for Debian
 This package provides the needed tools to build Debian packages for the [SECONDO](http://dna.fernuni-hagen.de/secondo/) database. 
 
