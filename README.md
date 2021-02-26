@@ -1,7 +1,7 @@
 
-!!!! 
-Current version is moved to https://github.com/secondo-database/secondo/tree/main/packaging/debian
-!!!!
+
+__Current development is done in https://github.com/secondo-database/secondo/tree/main/packaging/debian__
+
 
 
 
